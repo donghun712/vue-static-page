@@ -1,22 +1,21 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
-const wishes = [
-  '풍성한 한가위 보내세요',
-  '보름달처럼 마음도 꽉 채우세요',
-  '가족과 함께 따뜻한 명절 되세요',
-  '늘 건강하고 행복하세요',
-]
-
+const wishes = ['풍성한 한가위 보내세요', '보름달처럼 마음도 꽉 채우세요', '가족과 함께 따뜻한 명절 되세요', '늘 건강하고 행복하세요']
 const idx = ref(0)
-const next = () => {
-  idx.value = (idx.value + 1) % wishes.length
-}
+const next = () => { idx.value = (idx.value + 1) % wishes.length }
 
-// 자동 전환(3.5초)
-let timer: number | undefined
+// setInterval id 저장용 변수 (브라우저에서는 number)
+let intervalId: number | undefined
+
 onMounted(() => {
-  timer = window.setInterval(next, 3500)
+  intervalId = window.setInterval(next, 3500)
+})
+
+onUnmounted(() => {
+  if (intervalId !== undefined) {
+    clearInterval(intervalId)
+  }
 })
 </script>
 
