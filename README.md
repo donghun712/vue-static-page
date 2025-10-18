@@ -30,7 +30,7 @@ npm run dev
 
 ## 📂 프로젝트 구조
 <pre> 
-```text 
+
 ├── src/ 
 │ ├── App.vue # 메인 컴포넌트 (전체 페이지) 
 │ └── main.ts # 애플리케이션 엔트리 포인트 
@@ -39,7 +39,7 @@ npm run dev
 ├── package.json 
 ├── tsconfig.json 
 ├── vite.config.ts 
-└── README.md ``` 
+└── README.md 
 </pre>
 
 ## 🎨 디자인 컨셉
