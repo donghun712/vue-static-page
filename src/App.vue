@@ -132,6 +132,7 @@ body {
   position: relative;
   height: 42vh;
   min-height: 280px;
+  z-index: 1;
 }
 
 /* 보름달 */
@@ -260,8 +261,10 @@ body {
   }
 }
 
-/* 상단 배너 */
+/* 상단 배너 - z-index 추가로 달보다 위에 표시 */
 .banner {
+  position: relative;
+  z-index: 10;
   margin: 0 auto;
   margin-top: -2rem;
   display: flex;
@@ -299,8 +302,10 @@ body {
   color: #ffe6b0;
 }
 
-/* 오방색 띠 */
+/* 오방색 띠 - z-index 추가 */
 .hanbok-stripes {
+  position: relative;
+  z-index: 10;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   height: 10px;
@@ -323,8 +328,10 @@ body {
 .s4 { background: var(--s-black); }
 .s5 { background: var(--s-white); }
 
-/* 메시지 카드 */
+/* 메시지 카드 - z-index 추가 */
 .card {
+  position: relative;
+  z-index: 10;
   margin: 1.2rem auto 0;
   width: min(720px, 92vw);
   background: rgba(248, 246, 242, 0.92);
@@ -394,9 +401,10 @@ body {
       0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 솔잎 장식 */
+/* 솔잎 장식 - z-index 추가 */
 .pine-wrap {
   position: relative;
+  z-index: 10;
   width: min(720px, 92vw);
   margin: 1.5rem auto 0.6rem;
   display: flex;
@@ -426,8 +434,10 @@ body {
   transform: rotate(18deg);
 }
 
-/* 기와지붕 */
+/* 기와지붕 - z-index 추가 */
 .roof {
+  position: relative;
+  z-index: 10;
   height: 38px;
   margin-top: 1rem;
   background:
